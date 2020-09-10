@@ -1,5 +1,8 @@
 import { container } from 'tsyringe';
 
+import '@modules/users/providers';
+import './providers';
+
 import IAppointmentsRepository from '@modules/appointments/repositories/IAppointmentsRepository';
 import AppointmentsRepository from '@modules/appointments/infra/typeorm/repositories/AppointmentsRepository';
 
@@ -11,7 +14,4 @@ container.register<IAppointmentsRepository>(
   AppointmentsRepository,
 );
 
-container.register<IUsersRepository>(
-  'UsersRepository',
-  UsersRepository,
-);
+container.register<IUsersRepository>('UsersRepository', UsersRepository);
