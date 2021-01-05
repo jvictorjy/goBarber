@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import redis, { createClient } from 'redis';
+import redis from 'redis';
 import { RateLimiterRedis } from 'rate-limiter-flexible';
 import AppError from '@shared/erros/AppError';
 
